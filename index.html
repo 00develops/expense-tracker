@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="hlw.css">
+    <title>Tracker</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      
+        <!-- TITLE -->
+        <h1 class='title'>Expense Tracker</h1>
+        <!-- Your Balance Section -->
+        <div class="balance">
+          <h2>Your Balance</h2>
+          <h1>$0.00</h1>
+        </div>
+        <!--  Income / Expense-->
+        <div class="income-expense">
+          <div class="income">
+            <h2>Income</h2>
+            <p>$0.00</p>
+          </div>
+          
+          <div class="expense">
+            <h2>Expense</h2>
+            <p>$0.00</p>
+          </div>
+        </div>
+      
+        <!--  Records Section -->
+        <div class="records" id='history'>
+          <h2>History</h2>
+          <hr>
+        </div>
+        <!-- Add Transaction -->
+        <div class="new-transaction">
+          <form class="transaction-form">
+            <h2>Add Transaction</h2>
+            <hr>
+            <div class="transaction-group">
+              <label class="label">Text</label>
+              <input id='note' type="text" placeholder='Enter Note'>
+            </div>
+            <div class="transaction-group">
+              <label class="label">Amount</label><br/>
+              <label>(negative -> expense | positive -> income)</label>
+              <input id='amount' type="text" placeholder='Enter Amount'>
+            </div>
+            <button id='add'>Add Transaction</button>
+          </form>
+        </div>
+      </div>
+      <script src="./hlw.js"></script>
+</body>
+</html>
