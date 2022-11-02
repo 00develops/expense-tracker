@@ -9,12 +9,14 @@ function display(note, amt) {
   // console.log(history.classList);
   const record = document.createElement("div");
   record.classList.add("record");
-  if (amt.charAt(0) === "+") record.classList.add("record-income");
+  if (amt.charAt(0) === "+" || amt.charAt(0)!=="-") record.classList.add("record-income");
   else record.classList.add("record-expense");
   let noteText = document.createElement("p");
   let amount = document.createElement("p");
+  
   noteText.innerText = note;
   amount.innerText = amt;
+  
   record.appendChild(noteText);
   record.appendChild(amount);
   history.appendChild(record);
@@ -34,17 +36,8 @@ addBtn.addEventListener("click", (e) => {
     let note = text.value;
     let amt = amount.value;
     display(note, amt);
+  
   }
 });
 
-// eventListener -> click
-// input -> .value
-// createElement 
-// add class -> .classList .add('value') rescord.classList.remove('records')
 
-// append -> ek element html mai exists karta ho
-
-// note, amt -
-// 1. +amt -> income
-// 2. -amt -> expense
-// 3. total cal -> your balance
